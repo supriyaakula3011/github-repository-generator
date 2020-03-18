@@ -1,4 +1,4 @@
-package com.navin;
+package com.priya;
 public class TernaryOperator {
     public static void main(String args[])
     {
