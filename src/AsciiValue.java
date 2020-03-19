@@ -4,6 +4,6 @@ public class AsciiValue {
         for(int i=0;i<=127;i++)
         {
         System.out.printf("%d : %c \n",i,i);
-        }
+        } 
     } 
 }
