@@ -6,7 +6,6 @@ public class StaticKeyword {
 }
 class Abc2
 {
-    //int i=5;
     static int i;
     public static void show()
     {
