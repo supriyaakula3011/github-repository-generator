@@ -11,7 +11,7 @@ public class AppTest {
 		App app=new App();
 		int expected=2;
 		int actual=app.add(1,1);
-		System.out.println("this is ran");
+		System.out.println("this is the ran. ");
 		assertEquals(expected,  actual);
 	}
 
