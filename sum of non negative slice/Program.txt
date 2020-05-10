@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Program
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int[] a=new int[n];
+	    for(int i=0;i<n;i++)
+	    {
+	       a[i]=sc.nextInt(); 
+	    }
+	    int sum=0,max=0;
+	    for(int j=0;j<n;j++)
+	    {
+	        if(a[j]>0)
+	        sum=sum+a[j];
+	        else
+	        {
+	        if(sum>max)
+	        {
+	        max=sum;
+	        sum=0;
+	        }
+	        }
+	    }
+	    if(max>sum)
+	    System.out.println(max);
+	    else
+	     System.out.println(sum);
+	    
+	    
+	    
+		
+	}
+}
