@@ -1,0 +1,36 @@
+import java.util.*;
+public class Program
+{
+public static void main(String[] args) {
+   int a[]=new int[20];
+   int i,j,k;
+   Scanner sc=new Scanner(System.in);
+   int n=sc.nextInt();
+   for(int l=0;l<n;l++)
+   {
+       a[l]=sc.nextInt();
+   }
+   for(i=0;i<n;i++)
+   {
+       for(j=i+1;j<n;)
+       {
+           if(a[j]==a[i])
+           {
+               for(k=j;k<n;k++)
+               {
+                   a[k]=a[k+1];
+               }
+               n--;
+           }
+           else
+           j++;
+       }
+   }
+   for(int m=0;m<n;m++)
+   {
+       System.out.print(a[m]);
+   }
+ 
+
+}
+}
