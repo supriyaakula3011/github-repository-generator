@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+<title>Registration</title>
+</head>
+
+<body style="background-image:url('data:image/png;base64,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');   
+ background-size: 60% 100%">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}">VISA APPLICATION Registration FORM</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<br>
+	<br>
+	<div class="container">
+	<h1>WELCOME APPLICANT</h1>
+	<h2>STATUS</h2>
+		<h1><strong>Your Visa Application is being Processed</strong></h1>
+
+		<p>
+			<strong>Thank <span sec:authentication="principal.username">You</span></strong>
+		</p>
+	</div>
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
